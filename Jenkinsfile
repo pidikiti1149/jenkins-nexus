@@ -37,9 +37,9 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: 'nexus3',
                             
-                            protocol: 'http',
+                            protocol: 'http',       
 
-                            nexusUrl: '3.137.141.95:8081',
+                            nexusUrl: '13.92.186.249:8081',
 
                             groupId: 'pom.com.mycompany.app',
 
