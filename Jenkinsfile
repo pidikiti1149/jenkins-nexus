@@ -14,6 +14,16 @@ pipeline {
                 
             }
         }   
+        
+        stage("Compile") {
+    steps {
+       sh """
+         mvn help:evaluate -Dexpression=project.version -q -DforceStdout > version.txt
+       """
+    }
+}
+        
+        
    stage("Publish to Nexus Repository Manager") {
 
             steps {
